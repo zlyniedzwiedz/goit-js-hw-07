@@ -1,0 +1,1 @@
+W zadaniu 1 powstaje galeria która po kliknięciu w obraz otwiera modala z obrazem w większym rozmiarze. W zadaniu drugim dodatkowo otwiera się galeria pozwalająca na przeglądanie zdjęć w samym modalu. 
