@@ -7,6 +7,10 @@ const galleryList = document.querySelector(".gallery");
 let instance = basicLightbox.create("")
 const galleryImage = document.querySelector("gallery_image")
 const imageHandler = (image) => {
+if (image.target.nodeName !== "IMG") {
+  return
+}
+
  image.preventDefault()
  instance = basicLightbox.create(`<img class="gallery__image"
  src="${image.target.getAttribute("data-source")}"
@@ -32,7 +36,7 @@ const galleryMarkup = galleryItems
 
   galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
 
-  galleryList.addEventListener("click", imageHandler)
+  galleryList.addEventListener("click", imageHandler);
 
   galleryList.addEventListener("keydown", (event) => {
     if (event.key === "Escape" ) {
